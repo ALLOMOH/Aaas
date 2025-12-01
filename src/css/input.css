@@ -1,0 +1,46 @@
+@import "tailwindcss";
+
+:route{
+    --color-primary: #031926;
+    --color-secondary: #468189;
+    --color-accent: #f4e9cd;
+    --font: 'Foremost';
+}
+
+
+@layer components {
+    .container {
+        @apply max-w-7xl  mx-auto px-4 sm:px-6 lg:px-8;
+    }
+
+    .font-Foremost {
+        font-family: var(--font);
+        font-weight: 400;
+    }
+
+}
+
+@theme {
+    --color-primary:var(--color-primary);
+    --color-secondary:var(--color-secondary);
+    --color-accent:var(--color-accent);
+}
+
+@layer utilities {
+    .transition-all{
+        transition-property: all;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+        transition-duration: 300ms;
+    }
+    .transition-transfrom{
+        transition-property:transform;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+        transition-duration: 300ms;
+    }
+
+    .transition-colors{
+        transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform;
+        transition-timing-function: cubic-bezier(0.4,0,0.2,1);
+        transition-duration: 300ms
+    }
+}
